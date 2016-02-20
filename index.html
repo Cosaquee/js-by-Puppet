@@ -44,47 +44,9 @@
         <section>
 
         <h1>Puppet</h1>
-        <h4 class="blue">Wprowadzenie do technologii</h4>
-        <p><span style="font-size:16px">by Krzysztof Suszyński | <a href="https://twitter.com/ksuszynski" target="_blank">@ksuszynski</a></span></p>
+        <h4 class="blue">Tworzenie ekosystemu deweloperskiego</h4>
+        <p><span style="font-size:16px">by Karol Kozakowski | <a href="https://twitter.com/cosaquee" target="_blank">@cosaquee</a></span></p>
 
-      </section>
-
-      <section data-background-color="#4c1130">
-        <section>
-          <img style="float: right; margin: 20" height="250" src="https://s3.amazonaws.com/media-p.slid.es/uploads/cardil/images/1055839/profile.jpg">
-          <div style="text-align: left;">
-            <h1 class="blue">Hej!</h1>
-            <p>Krzysztof Suszyński</p>
-            <ul>
-              <li class="fragment">Ewangelizuje z Puppet i Java</li>
-              <li class="fragment">Główny Programista w COI / właściciel Wave Software <br />
-                <img src="img/pres/plid-logo.png" height="40" />
-                <img src="img/pres/sellforge_540_170.png" height="50" />
-              </li>
-              <li class="fragment">Od 2014r. współpraca z <img height="36" style="margin-bottom: -10px" src="img/logos/sages-logo.png" /></li>
-            </ul>
-          </div>
-        </section>
-
-        <section>
-          <ul>
-            <li>Z DevOps pierwszy raz w 2010 roku</li>
-            <li>Duże wdrożenia z DevOps / Puppet</li>
-            <li class="fragment">Prezentacje na User Groups i szkolenia pracowników</li>
-            <li class="fragment">Wiele OS modułów: JBoss, Glassfish, XtreemFS, Artifactory, Flyway, Herald<br/>
-            <span style="display: inline-block; background: white; padding: 1em;">
-              <img height="100" src="img/logos/puppet.png"/>
-              <img height="100" src="img/pres/jboss.png"/>
-              <img height="100" src="img/pres/ruby-logo.png"/>
-              <img height="100" src="img/pres/java-logo.png"/>
-              <img height="100" src="img/logos/vagrant.png"/>
-              <img height="100" src="img/logos/docker.png"/>
-            </span>
-            </li>
-
-          </ul>
-
-        </section>
       </section>
 
       <section>
@@ -92,13 +54,13 @@
           <h2>Jak będzie wyglądał warsztat?</h2>
 
           <ul>
-            <li>~9 tematów: <ul>
+            <li>~11 tematów: <ul>
               <li>Wstęp teoretyczny</li>
               <li>Samodzielna praca</li>
               <li>Przerwa</li>
-            </ul></li>
+            </ul>
+            </li>
             <li>Mikro projekt</li>
-            <li>Obiad koło 13</li>
           </ul>
 
         </section>
@@ -917,7 +879,7 @@ package { 'lolcat':
           <p>
             Zarządza użytkownikami w systemie
           </p>
-          <pre><code class="puppet">user { 'ksuszynski':
+          <pre><code class="puppet">user { 'kkozakowski':
   ensure => 'present',
   shell  => '/bin/bash',
   groups => ['admin', 'user'],
@@ -1045,7 +1007,7 @@ file { '/etc/passwd':
         <section data-background-color="#A61C00">
           <h1>Zadanie 9</h1>
           <ul>
-            <li>Napisz manifest instalujący i uruchamiający usługę apache</li>
+            <li>Napisz manifest instalujący i uruchamiający usługę nginix</li>
             <li>Powinna ona zawierać warunkową obsługę dla rodzin systemów Debian i Red Hat</li>
             <li>Sprawdź manifest przy użyciu: <code>puppet parser validate plik.pp</code></li>
             <li>Uruchom przy użyciu Vagrant</li>
@@ -1071,17 +1033,6 @@ file { '/etc/passwd':
         <section>
           <h1>Tryb agent</h1>
           <h2 class="blue">demo</h2>
-        </section>
-
-        <section data-background-color="#A61C00">
-          <h1>Zadanie 10</h1>
-          <ul>
-            <li>Używając Vagranta uruchomić 2 maszyny master i agent</li>
-            <li>Zainstalować na obu puppet</li>
-            <li>Połączyć agenta do mastera</li>
-            <li>Ma masterze dodać kod i przydzielić go dla agenta</li>
-            <li>Uruchomić agenta</li>
-          </ul>
         </section>
       </section>
 
@@ -1129,7 +1080,7 @@ file { '/etc/passwd':
         </section>
 
         <section data-background-color="#A61C00">
-          <h1>Zadanie 11</h1>
+          <h1>Zadanie 10</h1>
           <ul>
             <li>Wykorzystując kod z zadania 9 przetestować działanie trybu bezoperacyjnego</li>
             <li>Przywrócić maszynę do stanu początkowego - sahara lub vagrant destroy</li>
@@ -1255,9 +1206,9 @@ define apache::vhost ($port, $docroot, $servername = $title, $vhost_name = '*') 
 }</code></pre>
         </section>
         <section data-background-color="#A61C00">
-          <h1>Zadanie 12</h1>
+          <h1>Zadanie 11</h1>
           <ul>
-            <li>Wykorzystując kod z zadania 11 utworzyć moduł puppet i przenieść kod do klas i definicji</li>
+            <li>Wykorzystując kod z zadania 10 utworzyć moduł puppet i przenieść kod do klas i definicji</li>
             <li>Przygotować smoke testy w <code>tests</code></li>
             <li>Uruchomić testy z flagą <code>--noop</code></li>
             <li>Uruchomić kod klas</li>
@@ -1310,8 +1261,8 @@ define apache::vhost ($port, $docroot, $servername = $title, $vhost_name = '*') 
       <section data-background-color="#A61C00">
         <h1>Zadanie 13</h1>
         <ul>
-          <li>Wykorzystując poznane umiejętności napisz moduł puppeta instalujący i konfigurujący blog WordPress</li>
-          <li>Instalacja interpretera PHP, serwera bazy danych, serwera www, konfiguracja użytkowników systemowych</li>
+          <li>Wykorzystując poznane umiejętności napisz moduł puppeta instalujący i konfigurujący środowisko JavaScript</li>
+          <li>Instalacja modułu dla npm, instalacja narzędzi Grunt, Karma i Bower. Pamiętaj o kolejności instalacji ! </li>
           <li>Nie zapomnij o testach dymnych</li>
           <li>Postaraj się zachować idempotencję</li>
           <li>Uruchom kod i przetestuj</li>
