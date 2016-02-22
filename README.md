@@ -1,6 +1,6 @@
-# Wprowadzenie do technologii Puppet
+# Tworzenie środowiska deweloperskeigo dla programistów JavaScript przy użyciu narzędzi Puppet oraz Vagrant
 
-Slajdy: http://cardil.github.io/puppet-tut
+Slajdy: http://cosaquee.github.io/puppet-tut
 
 1. Czym jest DevOps i gdzie w tym Puppet?
 1. Sposoby pracy z Puppet
