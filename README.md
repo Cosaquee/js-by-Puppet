@@ -6,5 +6,6 @@ Slajdy: http://cosaquee.github.io/js-by-puppet
 1. Wprowadzenie do Vagrant
 1. Przypomnienie z Puppet DSL
 1. Modułowość - klasy i definicje w Puppet
-1. Puppetforge i zewnętrzne moduly(librarian-puppet i r10k)
-1. Projekt - stworzenie środowiska deweloperskiego JS przy użyciu Puppet
+1. Puppetforge i zewnętrzne moduly (librarian-puppet)
+1. Opis modułu puppetlabs/nodejs
+1. Stworzenie środowiska deweloperskiego JS przy użyciu Puppet

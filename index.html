@@ -98,6 +98,8 @@
                         <li class="fragment">Przypomnienie z Puppet DSL</li>
                         <li class="fragment">Modułowość - klasy i definicje w Puppet</li>
                         <li class="fragment">Puppetforge i zewnętrzne moduły(librarian-puppet i r10k)</li>
+                        <li class="fragment">Moduł puppetlabs/nodejs</li>
+                        <li class="fragment">Puppet provider</li>
                         <li class="fragment">Projekt - stworzenie środowiska deweloperskiego JS przy użyciu Puppet</li>
                 </section>
             </section>
@@ -499,7 +501,7 @@ sudo apt-get update &amp;&amp; sudo apt-get install -y puppet</code></pre></li>
                         Kod puppet umieszczamy w:
                     </p>
                     <ul>
-                        <li class="fragment">modułach</li>
+                        <li>modułach</li>
                         <li class="fragment">klasach</li>
                         <li class="fragment">definicjach</li>
                     </ul>
@@ -530,19 +532,28 @@ sudo apt-get update &amp;&amp; sudo apt-get install -y puppet</code></pre></li>
                 <section>
                     <h2>Moduły 101</h2>
                     <ul>
-                        <li class="fragment">Moduły znajdują się na PM</li>
+                        <li>Moduły znajdują się na PM</li>
                         <li class="fragment">Moduły zawierają kod Puppet</li>
                         <li class="fragment">Moduły posiadają określony układ</li>
                         <li class="fragment">Moduły mogą być prosto instalowane</li>
                     </ul>
-                    <p>
+                    <p class="fragment">
                         Wiecej: <a href="http://slides.com/cardil/reusable-puppet-module-development-and-testing">http://slides.com/cardil/...</a>
                     </p>
                 </section>
+
+                <section>
+                    <h1>Generowanie modułu</h1>
+                    <p><code>puppet module generate company/modulename</code></p>
+                    <p>
+                        Generuje strukturę modułu
+                    </p>
+                </section>
+
                 <section>
                     <h2>Klasy</h2>
                     <ul>
-                        <li class="fragment">Klasy to nazwane bloki kodu Puppet</li>
+                        <li>Klasy to nazwane bloki kodu Puppet</li>
                         <li class="fragment">Są definiowane w modułach do późniejszego użycia</li>
                         <li class="fragment">Nie są automatycznie wywoływane, muszą być dołączone do katalogu</li>
                         <li class="fragment">Generalnie opisują średnie i duże fragmenty funkcjonalności</li>
@@ -582,7 +593,7 @@ include apache</code></pre>
                 <section>
                     <h2>Definicje</h2>
                     <ul>
-                        <li class="fragment">To bloki kodu puppet które mogą być wywołane wielokrotnie z różnymi parametrami</li>
+                        <li>To bloki kodu puppet które mogą być wywołane wielokrotnie z różnymi parametrami</li>
                         <li class="fragment">Mogą być użyte jako proste makra dla powtarzających się operacji</li>
                     </ul>
                 </section>
@@ -638,7 +649,7 @@ puppet module install puppetlabs/apt # instaluje moduł</code></pre>
 
                 <section>
                     <h2>Jakie moduły wybierać?</h2>
-                    <p class="fragment"><img style="float: right" src="img/supported-tag-upper-right.png" alt="" /> pisane przez Puppetlabs, testowane na wielu platformach</p>
+                    <p><img style="float: right" src="img/supported-tag-upper-right.png" alt="" /> pisane przez Puppetlabs, testowane na wielu platformach</p>
                     <p class="fragment"><img style="float: right" src="img/approved-tag-upper-right.png" alt="" /> pisane przez innych autorów, zaakceptowane przez Puppetlabs jako jedne z najlepszych spełniających wymagania</p>
                     <p class="fragment">Ilość ściągnięć, historia, kto developuje, zależności, instalacja pakietów systemu, wartości na sztywno</p>
                 </section>
@@ -668,170 +679,217 @@ mod 'puppetlabs/firewall', '1.8.0'</code></pre></li>
                         <li>Uruchomić ten skrypt przy pomocy Vagrant</li>
                     </ul>
                 </section>
-                </section>
+            </section>
 
+
+            <section>
 
                 <section>
-                    <section>
-                        <h1>puppetlabs/nodejs</h1>
-                        <h2>Moduł</h2>
-                    </section>
+                    <h2>Środowisko deweloperskie</h2>
+                    <h1 class="blue">JavaScript</h1>
 
-                    <section>
-                        <h1 class="blue">JavaScript</h1>
-                        <ul>
-                            <li class="fragment">skryptowy język programowania</li>
-                            <li class="fragment">stworzony przez firmę Netscape</li>
-                            <li class="fragment">dominujacy w przeglądarkach internetowych</li>
-                            <li class="fragment">coraz bardziej popularny w wykorzystaniu serwerowym dzięki nodejs</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h1 class="blue">Node.js</h1>
-                        <ul>
-                            <li class="fragment">środowisko programistyczne</li>
-                            <li class="fragment">tworzenie wysoce skalowalnych aplikacji internetowych</li>
-                            <li class="fragment">szczególnie serwery www</li>
-                            <li class="fragment">przystosowane dla JavaScript</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h1 class="blue">NPM</h1>
-                        <ul>
-                            <li class="fragment">Menadżer pakietów dla JavaScript</li>
-                            <li class="fragment">Największa ilość bibliotek i paczek</li>
-                            <li class="fragment">Łatwość publikacji własnego kodu</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h1 class="blue">Dlaczego puppetlabs/nodejs</h1>
-                        <ul>
-                            <li class="fragment">instalacja nodejs</li>
-                            <li class="fragment">udostępnia provider Puppet npm</li>
-                            <li class="fragment">możliwość instalacji lokalnie jak i globalnie</li>
-                            <li class="fragment">duża ilość instalacji, aktywnie wspierane</li>
-                        </ul>
-
-                        <p>https://forge.puppetlabs.com/puppetlabs/nodejs</p>
-                    </section>
-
-                    <section data-background-color="#A61C00">
-                        <h1>Zadanie 6</h1>
-                        <ul>
-                            <li class="fragment">Instalacja modułu <code>puppetlabs/nodejs</code>(za pomocą librarian-puppet)</li>
-                            <li class="fragment">Napisanie manifestu zawierającego nodejs <code>include nodejs</code></li>
-                            <li class="fragment">Uruchomienie na Vagrant i prztestowanie działania poprzez wpisanie w konsole <code>node</code></li>
-                        </ul>
-                    </section>
                 </section>
 
                 <section>
-                    <section>
-                        <h1>Puppet provider</h1>
-                    </section>
 
-                    <section>
-                        <h2>Provider</h2>
-                        <ul>
-                            <li class="fragment">Implementacja sposobu instalacji zasobu typu <code>package</code></li>
-                            <li class="fragment">Możliwe wskazanie providera którym chce się zainstalować daną rzecz</li>
-                            <li class="fragment">Wiele możliwości: aix, appdmg, windows, apt, rpm, pip3</li>
-                        </ul>
-                    </section>
+                    <img src="img/logos/JavaScript-logo.png" style="height: 250px" />
+                    <h2>JavaScript</h2>
+                    <ul>
+                        <li>skryptowy język programowania</li>
+                        <li class="fragment">stworzony przez firmę Netscape</li>
+                        <li class="fragment">dominujacy w przeglądarkach internetowych</li>
+                        <li class="fragment">coraz bardziej popularny w wykorzystaniu serwerowym dzięki nodejs</li>
+                    </ul>
+                </section>
 
-                    <section>
-                        <h2>Dodatkowe providery</h2>
-                        <ul>
-                            <li>Możliwość dodawania dodatkowych providerów</li>
-                        </ul>
+                <section>
+                    <h1 class="blue">Node.js</h1>
+                    <ul>
+                        <li>środowisko programistyczne JavaScript</li>
+                        <li class="fragment">przystosowane do uruchamiania aplikacji po stronie serwera</li>
+                        <li class="fragment">oraz wielu różnych narzędzi deweloperskich i programów</li>
+                    </ul>
+                </section>
 
-                        <pre><code class="puppet">package { 'express':
+                <section>
+                    <img src="img/logos/npm-logo.png" style="height: 250px" />
+                    <ul>
+                        <li>Menadżer pakietów dla JavaScript</li>
+                        <li class="fragment">Największa ilość bibliotek</li>
+                        <li class="fragment">Łatwość publikacji własnego kodu</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Moduł</h2>
+                    <h1 class="blue">puppetlabs/nodejs</h1>
+                </section>
+
+                <section>
+                    <h2>Dlaczego wybrałem</h2>
+                    <h1 class="blue">puppetlabs/nodejs</h1>
+                    <ul>
+                        <li>możliwość instalacji nodejs</li>
+                        <li class="fragment">udostępnia provider dla zasobu <code>package</code></li>
+                        <li class="fragment">możliwość instalacji biblioteki lokalnie jak i globalnie</li>
+                        <li class="fragment">bezpośredni autorzy Puppeta, duża ilość instalacji, aktywnie wspierane, mozliwość parametryzacji</li>
+                    </ul>
+
+                    <p class="fragment">https://forge.puppetlabs.com/puppetlabs/nodejs</p>
+                </section>
+
+                <section data-background-color="#A61C00">
+                    <h1>Zadanie 6</h1>
+                    <ul>
+                        <li>Instalacja modułu <code>puppetlabs/nodejs</code>(za pomocą librarian-puppet)</li>
+                        <li>Napisanie manifestu zawierającego nodejs <code>include nodejs</code></li>
+                        <li>Uruchomienie na Vagrant i przetestowanie działania poprzez wpisanie w konsole <code>node</code></li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Czym są</h2>
+                    <h1 class="blue">Puppet providers?</h1>
+                </section>
+
+                <section>
+                    <h1>Provider</h1>
+                    <ul>
+                        <li>Zasoby w Puppet posiadają wiele providerów</li>
+                        <li class="fragment">Każdy provider jest konkretną implementacją dla konkretnego systemu operacyjnego lub podsystemu.</li>
+                        <li class="fragment">Na przykład dla typu package istnieje wiele providerów między innymi: aix, appdmg, windows, apt, rpm, pip3</li>
+                        <li class="fragment">Puppet automatycznie wybiera odpowiedni provider</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Używanie konkretnego providera</h2>
+                    <p>
+                        Istenieje możliwość wymuszenia konkretnego providera dla każdego typu
+                    </p>
+                    <pre><code class="puppet">package { 'lolcat':
   ensure   => 'present',
-  provider => 'npm',
+  provider => 'gem',
 }</code></pre>
-                    </section>
-
-                    <section data-background-color="#A61C00">
-                        <h1>Zadanie 7</h1>
-                        <ul>
-                            <li>Instalacja paczki <code>compass</code> z RubyGems przy pomocy package i providera <code>gem</code></li>
-                            <li>Sprawdzenie działania poprzez wpisane <code>compass</code></li>
-                        </ul>
-                    </section>
                 </section>
 
                 <section>
-                    <section>
-                        <h2>Użycie modułu puppetlabs/nodejs</h2>
+                    <h2>Dodatkowe providery</h2>
+                    <ul>
+                        <li>istnieje możliwość dodawania dodatkowych providerów</li>
+                        <li class="fragment">należy napisać odpowiedni kod w języku Ruby</li>
+                        <li class="fragment">niektóre moduły na PuppetForge udostępniają takie providery</li>
+                    </ul>
+                </section>
 
-                        <p>
-                            W sytemie dostępne będzie polecenie node.
-                        </p>
-                    </section>
+                <section data-background-color="#A61C00">
+                    <h1>Zadanie 7</h1>
+                    <ul>
+                        <li>Instalacja biblioteki <code>lolcat</code> z RubyGems przy pomocy zasobu <code>package</code> i providera <code>gem</code></li>
+                        <li>Sprawdzenie działania poprzez wpisane <code>lolcat -h</code></li>
+                    </ul>
+                </section>
+            </section>
 
-                    <section>
-                        <h2>Instalacja Node.js</h2>
-                        <pre><code class="puppet">class {'nodejs':}</code></pre>
-                    </section>
+            <section>
+                <section>
+                    <h3>Sposoby użycia modułu</h3>
+                    <h2 class="blue">puppetlabs/nodejs</h2>
+                </section>
 
-                    <section>
-                        <h2>Instalacja globalna paczki</h2>
+                <section>
+                    <h2>Instalacja Node.js</h2>
+                    <pre><code class="puppet">include nodejs</code></pre>
+                    <p>
+                        Po wywołaniu będziemy mogli wywołać polecenie <code>node</code>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Instalacja biblioteki (globalna)</h2>
 
                     <pre><code class="puppet">package { 'express':
   ensure   => 'present',
   provider => 'npm',
 }</code></pre>
 
-<p>
-    Instalacja paczki <code>express</code> dla każdego użytkownika w systemie.
-</p>
-                    </section>
+                    <p>
+                        Instalacja paczki <code>express</code> dla każdego użytkownika w systemie.
+                    </p>
+                </section>
 
-                    <section>
-                        <h2>Instalacja paczki lokalnie</h2>
-                        <pre>
-                            <code class="puppet">nodejs::npm { 'express from the npm registry':
+                <section>
+                    <h2>Instalacja biblioteki (lokalnie)</h2>
+                    <pre><code class="puppet">nodejs::npm { 'express from the npm registry':
   ensure  => 'present',
   package => 'express',
-  target  => '/opt/packages',
+  target  => '~/node_modules',
 }</code></pre>
-<p>
-    Instalacja paczki <code>express</code> do /opt/packages dla aktualnego użytkownika w systemie.
-</p>
-                    </section>
-
-                    <section data-background-color="#A61C00">
-                        <h1>Zadanie 8</h1>
-                        <ul>
-                            <li>Zainstalować globalnie paczkę <code>grunt-cli</code> przy użyciu puppetlabs/nodejs</li>
-                            <li>Zainstalować lokalnie paczkę <code>mongodb</code> przy użyciu puppetlabs/nodejs</li>
-                        </ul>
-                    </section>
+                    <p>
+                        Instalacja biblioteke <code>express</code> do <code>~/node_modules</code> dla aktualnego użytkownika w systemie.
+                    </p>
+                    <p>
+                        Nie możemy wykorzystać zasobu <code>package</code> bo instaluje on w scieżkach systemowych
+                    </p>
                 </section>
 
                 <section data-background-color="#A61C00">
-                    <h1>Projekt</h1>
+                    <h1>Zadanie 8</h1>
                     <ul>
-                        <li>Za pomocą git sklonować repozytorium: </li>
-                        <li>Odpalić komende <code>npm install</code></li>
-                        <li>odpalić komende <code>grunt</code></li>
+                        <li>Zainstalować globalnie paczkę <code>grunt-cli</code> przy użyciu puppetlabs/nodejs</li>
+                        <li>Zainstalować lokalnie paczkę <code>mongodb</code> przy użyciu puppetlabs/nodejs</li>
                     </ul>
                 </section>
+            </section>
+
+            <section data-background-color="#A61C00">
+                <h1></h1>
+
+            </section>
+
+            <section data-background-color="#5A983F">
 
                 <section>
-                    <h1 class="blue">Co dalej</h1>
-                    <h2>Testy rspec</h2>
-                    <h2>Procesory raportów Puppet</h2>
-                    <h2>Pełna automatyzacja systemów CI</h2>
+                    <h1>Sprawdzenie</h1>
+                    <ul>
+                        <li>Za pomocą git sklonować repozytorium: </li>
+                        <li>Odpalić instalację zależności poprzez <code>npm install</code></li>
+                        <li>odpalić budowanie się projektu poprzez komende <code>grunt</code></li>
+                    </ul>
                 </section>
-
                 <section>
-                    <h1 class="blue">Dziękuje</h1>
+                    <h1>Podsumowanie</h1>
+                    <h2>warsztatu</h2>
+                    <p>
+                        Co poznaliśmy? Powtórka
+                    </p>
+                    <ul>
+                        <li class="fragment">środowisko deweloperskie: co to takiego, jak je tworzyć?</li>
+                        <li class="fragment">Wprowadzenie do Vagrant</li>
+                        <li class="fragment">Przypomnienie z Puppet DSL</li>
+                        <li class="fragment">Modułowość - klasy i definicje w Puppet</li>
+                        <li class="fragment">Puppetforge i zewnętrzne moduly (librarian-puppet)</li>
+                        <li  class="fragment">Opis modułu puppetlabs/nodejs</li>
+                        <li  class="fragment">Stworzenie środowiska deweloperskiego JS przy użyciu Puppet</li>
+                    </ul>
                 </section>
-                <!-- SLIDES ENDS HERE -->
+                <section>
+                    <h1 class="blue">Co dalej?</h1>
+                    <ul>
+                        <li>Testy rspec/beaker</li>
+                        <li>Dziedziczenie klas i podział na moduły</li>
+                        <li>Tworzenie niestandardowych funkcji oraz faktów</li>
+                        <li>Tworzenie dodatkowych typów i providerów</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <h1 class="blue">Dziękuje</h1>
+            </section>
+            <!-- SLIDES ENDS HERE -->
         </div>
     </div>
     <script src="lib/js/head.min.js"></script>
