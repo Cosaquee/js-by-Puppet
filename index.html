@@ -397,21 +397,6 @@ $ _</code></pre>
             </section>
 
             <section>
-
-                <section data-background-color="#A61C00">
-                    <h1>Zadanie 4</h1>
-                    <ol>
-                        <li>Używając Vagranta utworzyć snapshot przy użyciu sahara i zainstalować puppet z rubygems</li>
-                        <li>Uruchomić <code>puppet apply manifest.pp</code>, dwukrotnie, sprawdzając efekt<pre><code class="puppet">package { 'nginx':
-  ensure => 'installed',
-}</code></pre></li>
-                        <li>Przywrócić snapshot przy użyciu sahara i zainstalować puppet z repozytoriów puppetlabs</li>
-                        <li>Redo #2 (użyj też trybu <code>--noop</code> oraz <code>--debug</code>)</li>
-                    </ol>
-                </section>
-            </section>
-
-            <section>
                 <section data-background-color="#fff">
                     <img src="img/logos/puppet.png" />
                     <p class="fragment" style="color: #333">Jedno z najbardziej dojrzałych narzędzi DevOps</p>
@@ -618,12 +603,68 @@ define apache::vhost ($port, $docroot, $servername = $title, $vhost_name = '*') 
                 <section data-background-color="#A61C00">
                   <h1>Zadanie 4</h1>
                   <ul>
-                    <li>Wykorzystując kod z zadania 2 utworzyć moduły puppet <code>inazwisko/common</code> i przenieść kod do klas i definicji</li>
-                    <li>Przygotować smoke testy w <code>tests</code></li>
-                    <li>Uruchomić kod przy pomocy Vagrant</li>
+                    <li>Wykorzystując kod z zadania 2 utworzyć moduł puppet <code>inazwisko/javascript</code> i przenieść kod do klas i definicji</li>
+                    <li>Instalacja PuppetMaster skryptem Vagrant <code>apt-get install puppetmaster</code></li>
+                    <li>uruchomienie modulu przy pomocy Vagrant</li>
                   </ul>
                 </section>
             </section>
+
+            <section>
+        <section data-background-color="#fff">
+          <img src="img/forge-logo.png" alt="" />
+        </section>
+
+        <section>
+          <h1 class="blue">Forge</h1>
+          <ul>
+            <li>Hosting modułów Puppet - odpowiednik repozytorium pakietów</li>
+            <li class="fragment">Automatycznie zintegrowane z poleceniem <code>puppet module</code></li>
+            <li class="fragment">Wiele narzędzi wykorzystuje: librarian-puppet, r10k</li>
+            <li class="fragment">Jedynie publiczne moduły, bez możliwości instalacji wewnątrz sieci (są alternatywy: <a href="https://github.com/unibet/puppet-forge-server">unibet/puppet-forge-server</a>)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Szukanie i pobieranie modułów</h2>
+          <pre><code class="bash">puppet module list # listuje moduły
+puppet search apt # szuka modułu po słowie kluczowym
+puppet module install puppetlabs/apt # instaluje moduł</code></pre>
+        </section>
+
+        <section>
+          <h2>Jakie moduły wybierać?</h2>
+          <p class="fragment"><img style="float: right" src="img/supported-tag-upper-right.png" alt="" /> pisane przez Puppetlabs, testowane na wielu platformach</p>
+          <p class="fragment"><img  style="float: right" src="img/approved-tag-upper-right.png" alt="" /> pisane przez innych autorów, zaakceptowane przez Puppetlabs jako jedne z najlepszych spełniających wymagania</p>
+          <p class="fragment">Ilość ściągnięć, historia, kto developuje, zależności, instalacja pakietów systemu, wartości na sztywno</p>
+        </section>
+
+        <section>
+          <h1>librarian-puppet</h1>
+          <ul>
+            <li>Upewnia się, że odpowiednie moduły są zainstalowane</li>
+            <li class="fragment">Obsługuje plik <code>Puppetfile</code> <pre><code class="ruby">forge 'https://forge.puppetlabs.com/'
+
+mod 'puppetlabs/apt'
+mod 'puppetlabs/firewall', '1.8.0'</code></pre></li>
+            <li class="fragment">Instalacja z Rubygems: <code>gem install librarian-puppet</code></li>
+            <li class="fragment">Uruchomienie: <code>librarian-puppet update --verbose</code> w katalogu pliku <code>Puppetfile</code></li>
+          </ul>
+
+        </section>
+
+        <section data-background-color="#A61C00">
+          <h1>Zadanie 4</h1>
+          <ul>
+            <li>Napisz skrypt który: <ul>
+              <li>zainstaluje <code>librarian-puppet</code></li>
+              <li>zaaktualizuje plik w katalogu <code>/etc/puppet/Puppetfile</code></li>
+              <li>uruchomi polecenia <code>librarian-puppet update --verbose</code></li>
+            </ul></li>
+            <li>Uruchomić ten skrypt przy pomocy Vagrant</li>
+          </ul>
+        </section>
+
 
             <section data-background-color="#A61C00">
                 <h1>Projekt</h1>
