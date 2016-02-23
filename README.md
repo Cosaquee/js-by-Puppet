@@ -1,6 +1,6 @@
 # Tworzenie środowiska deweloperskiego dla programistów JavaScript przy użyciu narzędzi Puppet oraz Vagrant
 
-Slajdy: http://cosaquee.github.io/js-by-puppet
+Slajdy: http://cosaquee.github.io/js-by-Puppet
 
 1. środowisko deweloperskie: co to takiego i jak je tworzyć ?
 1. Wprowadzenie do Vagrant
