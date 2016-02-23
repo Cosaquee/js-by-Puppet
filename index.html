@@ -80,7 +80,7 @@
                 <section>
                     <h2>Jak będzie wyglądał warsztat?</h2>
                     <ul>
-                        <li>~6 tematów:
+                        <li>~8 tematów:
                             <ul>
                                 <li>Wstęp teoretyczny</li>
                                 <li>Samodzielna praca</li>
@@ -97,10 +97,10 @@
                         <li class="fragment">Wprowadzenie do narzędzia Vagrant</li>
                         <li class="fragment">Przypomnienie z Puppet DSL</li>
                         <li class="fragment">Modułowość - klasy i definicje w Puppet</li>
-                        <li class="fragment">Puppetforge i zewnętrzne moduły(librarian-puppet i r10k)</li>
+                        <li class="fragment">Puppetforge i zewnętrzne moduły(librarian-puppet)</li>
                         <li class="fragment">Moduł puppetlabs/nodejs</li>
                         <li class="fragment">Puppet provider</li>
-                        <li class="fragment">Projekt - stworzenie środowiska deweloperskiego JS przy użyciu Puppet</li>
+                        <li class="fragment">Stworzenie środowiska deweloperskiego JS przy użyciu Puppet</li>
                 </section>
             </section>
 
@@ -128,7 +128,7 @@
 
                 <section>
                     <ul>
-                        <li class="fragment">Zależności danego projektu w odpowiednich wersjach</li>
+                        <li>Zależności danego projektu w odpowiednich wersjach</li>
                         <li class="fragment">Biblioteki i kod wymagany do zbudowania i przetestowania aplikacji</li>
                         <li class="fragment">Powinno być zbliżone do środowiska produkcyjnego</li>
                     </ul>
@@ -137,7 +137,7 @@
                 <section>
                     <h2 class="blue">Rodzaje środowisk</h2>
                     <ul>
-                        <li class="fragment">scentralizowane</li>
+                        <li>scentralizowane</li>
                         <li class="fragment">ręczne</li>
                         <li class="fragment">automatyczne</li>
                     </ul>
@@ -146,7 +146,7 @@
                 <section>
                     <h2 class="blue">Jak tworzyć</h2>
                     <ul>
-                        <li class="fragment">Użycie narzędzi typu <strong>Configuration Management</strong></li>
+                        <li>Użycie narzędzi typu <strong>Configuration Management</strong></li>
                         <li class="fragment">Praktyka DevOps</li>
                     </ul>
                 </section>
@@ -166,7 +166,7 @@
                 <section>
                     <h2>Praca bezpośrednio na docelowej infrastrukturze</h2>
                     <ul>
-                        <li class="fragment">Nie polecam</li>
+                        <li>Nie polecam</li>
                         <li class="fragment">Niebezpieczne i jedno dostępne</li>
                         <li class="fragment">Szczątkowe możliwości testowania</li>
                         <li class="fragment">Możliwość używania środowisk</li>
@@ -176,7 +176,7 @@
                 <section>
                     <h2>Wykorzystanie narzędzi typu Vagrant</h2>
                     <ul>
-                        <li class="fragment">W miarę wygodne i proste</li>
+                        <li>W miarę wygodne i proste</li>
                         <li class="fragment">Bezpieczne</li>
                         <li class="fragment">Możliwe dogłębne testowanie</li>
                         <li class="fragment">Możliwe wykorzystanie systemów CI</li>
@@ -186,7 +186,7 @@
                 <section>
                     <h2>Wykorzystanie separacji modułów</h2>
                     <ul>
-                        <li class="fragment">Wymaga ekosystemu developerskiego Puppet</li>
+                        <li>Wymaga ekosystemu developerskiego Puppet</li>
                         <li class="fragment">Bezpieczne, wielodostępne i skalowalne</li>
                         <li class="fragment">Możliwe pełne testowanie i separacja na odpowiedzialności</li>
                         <li class="fragment">Konieczne wykorzystanie systemów CI i CD</li>
@@ -213,7 +213,7 @@
                 <section>
                     <h2 class="blue">Kluczowe funkcje Vagranta</h2>
                     <ul style="font-size: 0.9em">
-                        <li class="fragment">dostarcza polecenia linii komend do sterowania maszyną lub maszynami wirtualnymi</li>
+                        <li>dostarcza polecenia linii komend do sterowania maszyną lub maszynami wirtualnymi</li>
                         <li class="fragment">pozwala na zapis konfiguracji w pliku Vagrantfile</li>
                         <li class="fragment">posiada szereg wbudowanych providerów: VirtualBox, VMWare, Docker, Hyper-V</li>
                         <li class="fragment">posiada szereg wbudowanych provisionerów: Shell, Chef, Puppet, Ansible, Docker, Salt, CFEngine</li>
@@ -697,8 +697,8 @@ mod 'puppetlabs/firewall', '1.8.0'</code></pre></li>
                     <ul>
                         <li>skryptowy język programowania</li>
                         <li class="fragment">stworzony przez firmę Netscape</li>
-                        <li class="fragment">dominujacy w przeglądarkach internetowych</li>
-                        <li class="fragment">coraz bardziej popularny w wykorzystaniu serwerowym dzięki nodejs</li>
+                        <li class="fragment">dominujący w przeglądarkach internetowych</li>
+                        <li class="fragment">coraz bardziej popularny w wykorzystaniu serwerowym dzięki Nodejs</li>
                     </ul>
                 </section>
 
@@ -732,7 +732,7 @@ mod 'puppetlabs/firewall', '1.8.0'</code></pre></li>
                         <li>możliwość instalacji nodejs</li>
                         <li class="fragment">udostępnia provider dla zasobu <code>package</code></li>
                         <li class="fragment">możliwość instalacji biblioteki lokalnie jak i globalnie</li>
-                        <li class="fragment">bezpośredni autorzy Puppeta, duża ilość instalacji, aktywnie wspierane, mozliwość parametryzacji</li>
+                        <li class="fragment">bezpośredni autorzy Puppeta, duża ilość instalacji, aktywnie wspierany, mozliwość parametryzacji</li>
                     </ul>
 
                     <p class="fragment">https://forge.puppetlabs.com/puppetlabs/nodejs</p>
@@ -759,7 +759,7 @@ mod 'puppetlabs/firewall', '1.8.0'</code></pre></li>
                     <ul>
                         <li>Zasoby w Puppet posiadają wiele providerów</li>
                         <li class="fragment">Każdy provider jest konkretną implementacją dla konkretnego systemu operacyjnego lub podsystemu.</li>
-                        <li class="fragment">Na przykład dla typu package istnieje wiele providerów między innymi: aix, appdmg, windows, apt, rpm, pip3</li>
+                        <li class="fragment">Na przykład, dla typu package istnieje wiele providerów między innymi: aix, appdmg, windows, apt, rpm, pip3</li>
                         <li class="fragment">Puppet automatycznie wybiera odpowiedni provider</li>
                     </ul>
                 </section>
@@ -844,19 +844,14 @@ mod 'puppetlabs/firewall', '1.8.0'</code></pre></li>
                 </section>
             </section>
 
-            <section data-background-color="#A61C00">
-                <h1></h1>
-
-            </section>
-
             <section data-background-color="#5A983F">
 
                 <section>
                     <h1>Sprawdzenie</h1>
                     <ul>
-                        <li>Za pomocą git sklonować repozytorium: </li>
+                        <li>Za pomocą git sklonować repozytorium: https://github.com/twitter/typeahead.js </li>
                         <li>Odpalić instalację zależności poprzez <code>npm install</code></li>
-                        <li>odpalić budowanie się projektu poprzez komende <code>grunt</code></li>
+                        <li>odpalić budowanie się projektu poprzez polecenie <code>grunt</code></li>
                     </ul>
                 </section>
                 <section>
