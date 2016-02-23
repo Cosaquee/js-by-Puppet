@@ -1,0 +1,27 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "puppetlabs/ubuntu-14.04-64-nocm"
+
+  config.vm.provision :shell, path:'src/bash/repo.sh'
+  config.vm.provision :shell, path:'src/bash/agent.sh'
+  config.vm.provision :shell, path:'src/bash/master.sh'
+
+  config.vm.provision :puppet do |puppet|
+      puppet.manifests_path = "src/puppet/manifests"
+      puppet.manifest_file  = "librarian.pp"
+  end
+
+config.vm.provision :shell, inline:'puppet module list'
+
+
+  config.vm.provision :puppet do |puppet|
+    puppet.manifests_path = "src/puppet/manifests"
+    puppet.module_path = "src/puppet/modules"
+    puppet.manifest_file  = "site.pp"
+
+    # puppet.options = "--verbose"
+  end
+
+end

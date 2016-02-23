@@ -1,0 +1,14 @@
+{
+  "name": "kkozakowski/javascript",
+  "version": "0.1.0",
+  "author": "kkozakowski",
+  "summary": "asd",
+  "license": "Apache 2.0",
+  "source": "asd",
+  "project_page": "asd",
+  "issues_url": "asd",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
