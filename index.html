@@ -48,31 +48,32 @@
             </section>
 
             <section>
-          <img style="float: right; margin: 20" height="250" src="img/self_logo.jpg">
-          <div style="text-align: left;">
-            <h1 class="blue">Cześć!</h1>
-            <p>Karol Kozakowski</p>
-            <ul>
-              <li class="fragment">Developer/DevOps Specialist @COI</li>
-            </ul>
+                <section>
+                    <img style="float: right; margin: 20" height="250" src="img/self_logo.jpg">
+                    <div style="text-align: left;">
+                        <h1 class="blue">Cześć!</h1>
+                        <p>Karol Kozakowski</p>
+                        <ul>
+                            <li class="fragment">Developer/DevOps Specialist @COI</li>
+                        </ul>
 
-            <ul>
-                <li class="fragment">Z DevOps od pół roku</li>
-                <li class="fragment">Zarządzanie ekosystemem do budowy i testowania aplikacji</li>
-            </ul>
-            <p>
+                        <ul>
+                            <li class="fragment">Z DevOps od pół roku</li>
+                            <li class="fragment">Zarządzanie ekosystemem do budowy i testowania aplikacji</li>
+                        </ul>
+                        <p>
 
-            </p>
-          </div>
-        </section>
+                        </p>
+                    </div>
+                </section>
 
-            <section>
-                <ul>
-                    <li>Tworzenie i zarządzanie modułami Puppet</li>
-                    <li>Zarządzanie systemami CI</li>
-                    <li>Praca z narzędziami wsparcia DevOps</li>
-                </ul>
-            </section>
+                <section>
+                    <ul>
+                        <li class="fragment">Tworzenie i zarządzanie modułami Puppet</li>
+                        <li class="fragment">Zarządzanie systemami CI</li>
+                        <li class="fragment">Praca z narzędziami wsparcia DevOps</li>
+                    </ul>
+                </section>
             </section>
 
             <section>
@@ -84,6 +85,9 @@
                                 <li>Wstęp teoretyczny</li>
                                 <li>Samodzielna praca</li>
                                 <li>Projekt na zakończenie warsztatu</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </section>
 
                 <section>
@@ -140,8 +144,8 @@
                 <section>
                     <h2 class="blue">Jak tworzyć</h2>
                     <ul>
-                        <li>Użycie narzędzi typu <strong>Configuration Management</strong></li>
-                        <li>Praktyka DevOps</li>
+                        <li class="fragment">Użycie narzędzi typu <strong>Configuration Management</strong></li>
+                        <li class="fragment">Praktyka DevOps</li>
                     </ul>
                 </section>
             </section>
@@ -160,7 +164,7 @@
                 <section>
                     <h2>Praca bezpośrednio na docelowej infrastrukturze</h2>
                     <ul>
-                        <li>Nie polecam</li>
+                        <li class="fragment">Nie polecam</li>
                         <li class="fragment">Niebezpieczne i jedno dostępne</li>
                         <li class="fragment">Szczątkowe możliwości testowania</li>
                         <li class="fragment">Możliwość używania środowisk</li>
@@ -180,7 +184,7 @@
                 <section>
                     <h2>Wykorzystanie separacji modułów</h2>
                     <ul>
-                        <li>Wymaga ekosystemu developerskiego Puppet</li>
+                        <li class="fragment">Wymaga ekosystemu developerskiego Puppet</li>
                         <li class="fragment">Bezpieczne, wielodostępne i skalowalne</li>
                         <li class="fragment">Możliwe pełne testowanie i separacja na odpowiedzialności</li>
                         <li class="fragment">Konieczne wykorzystanie systemów CI i CD</li>
@@ -495,9 +499,9 @@ sudo apt-get update &amp;&amp; sudo apt-get install -y puppet</code></pre></li>
                         Kod puppet umieszczamy w:
                     </p>
                     <ul>
-                        <li>modułach</li>
-                        <li>klasach</li>
-                        <li>definicjach</li>
+                        <li class="fragment">modułach</li>
+                        <li class="fragment">klasach</li>
+                        <li class="fragment">definicjach</li>
                     </ul>
                 </section>
 
@@ -526,10 +530,10 @@ sudo apt-get update &amp;&amp; sudo apt-get install -y puppet</code></pre></li>
                 <section>
                     <h2>Moduły 101</h2>
                     <ul>
-                        <li>Moduły znajdują się na PM</li>
-                        <li>Moduły zawierają kod Puppet</li>
-                        <li>Moduły posiadają określony układ</li>
-                        <li>Moduły mogą być prosto instalowane</li>
+                        <li class="fragment">Moduły znajdują się na PM</li>
+                        <li class="fragment">Moduły zawierają kod Puppet</li>
+                        <li class="fragment">Moduły posiadają określony układ</li>
+                        <li class="fragment">Moduły mogą być prosto instalowane</li>
                     </ul>
                     <p>
                         Wiecej: <a href="http://slides.com/cardil/reusable-puppet-module-development-and-testing">http://slides.com/cardil/...</a>
@@ -538,11 +542,11 @@ sudo apt-get update &amp;&amp; sudo apt-get install -y puppet</code></pre></li>
                 <section>
                     <h2>Klasy</h2>
                     <ul>
-                        <li>Klasy to nazwane bloki kodu Puppet</li>
-                        <li>Są definiowane w modułach do późniejszego użycia</li>
-                        <li>Nie są automatycznie wywoływane, muszą być dołączone do katalogu</li>
-                        <li>Generalnie opisują średnie i duże fragmenty funkcjonalności</li>
-                        <li>Nazwa może mylić z innymi językami programowania</li>
+                        <li class="fragment">Klasy to nazwane bloki kodu Puppet</li>
+                        <li class="fragment">Są definiowane w modułach do późniejszego użycia</li>
+                        <li class="fragment">Nie są automatycznie wywoływane, muszą być dołączone do katalogu</li>
+                        <li class="fragment">Generalnie opisują średnie i duże fragmenty funkcjonalności</li>
+                        <li class="fragment">Nazwa może mylić z innymi językami programowania</li>
                     </ul>
                 </section>
                 <section>
@@ -578,8 +582,8 @@ include apache</code></pre>
                 <section>
                     <h2>Definicje</h2>
                     <ul>
-                        <li>To bloki kodu puppet które mogą być wywołane wielokrotnie z różnymi parametrami</li>
-                        <li>Mogą być użyte jako proste makra dla powtarzających się operacji</li>
+                        <li class="fragment">To bloki kodu puppet które mogą być wywołane wielokrotnie z różnymi parametrami</li>
+                        <li class="fragment">Mogą być użyte jako proste makra dla powtarzających się operacji</li>
                     </ul>
                 </section>
                 <section>
@@ -601,95 +605,233 @@ define apache::vhost ($port, $docroot, $servername = $title, $vhost_name = '*') 
 }</code></pre>
                 </section>
                 <section data-background-color="#A61C00">
-                  <h1>Zadanie 4</h1>
-                  <ul>
-                    <li>Wykorzystując kod z zadania 2 utworzyć moduł puppet <code>inazwisko/javascript</code> i przenieść kod do klas i definicji</li>
-                    <li>Instalacja PuppetMaster skryptem Vagrant <code>apt-get install puppetmaster</code></li>
-                    <li>uruchomienie modulu przy pomocy Vagrant</li>
-                  </ul>
+                    <h1>Zadanie 4</h1>
+                    <ul>
+                        <li>Wykorzystując kod z zadania 2 utworzyć moduł puppet <code>inazwisko/javascript</code> i przenieść kod do klas i definicji</li>
+                        <li>Instalacja PuppetMaster skryptem Vagrant <code class="bash">apt-get install puppetmaster</code></li>
+                        <li>uruchomienie modulu przy pomocy Vagrant</li>
+                    </ul>
                 </section>
             </section>
 
             <section>
-        <section data-background-color="#fff">
-          <img src="img/forge-logo.png" alt="" />
-        </section>
+                <section data-background-color="#fff">
+                    <img src="img/forge-logo.png" alt="" />
+                </section>
 
-        <section>
-          <h1 class="blue">Forge</h1>
-          <ul>
-            <li>Hosting modułów Puppet - odpowiednik repozytorium pakietów</li>
-            <li class="fragment">Automatycznie zintegrowane z poleceniem <code>puppet module</code></li>
-            <li class="fragment">Wiele narzędzi wykorzystuje: librarian-puppet, r10k</li>
-            <li class="fragment">Jedynie publiczne moduły, bez możliwości instalacji wewnątrz sieci (są alternatywy: <a href="https://github.com/unibet/puppet-forge-server">unibet/puppet-forge-server</a>)</li>
-          </ul>
-        </section>
+                <section>
+                    <h1 class="blue">Forge</h1>
+                    <ul>
+                        <li>Hosting modułów Puppet - odpowiednik repozytorium pakietów</li>
+                        <li class="fragment">Automatycznie zintegrowane z poleceniem <code>puppet module</code></li>
+                        <li class="fragment">Wiele narzędzi wykorzystuje: librarian-puppet, r10k</li>
+                        <li class="fragment">Jedynie publiczne moduły, bez możliwości instalacji wewnątrz sieci (są alternatywy: <a href="https://github.com/unibet/puppet-forge-server">unibet/puppet-forge-server</a>)</li>
+                    </ul>
+                </section>
 
-        <section>
-          <h2>Szukanie i pobieranie modułów</h2>
-          <pre><code class="bash">puppet module list # listuje moduły
+                <section>
+                    <h2>Szukanie i pobieranie modułów</h2>
+                    <pre><code class="bash">puppet module list # listuje moduły
 puppet search apt # szuka modułu po słowie kluczowym
 puppet module install puppetlabs/apt # instaluje moduł</code></pre>
-        </section>
+                </section>
 
-        <section>
-          <h2>Jakie moduły wybierać?</h2>
-          <p class="fragment"><img style="float: right" src="img/supported-tag-upper-right.png" alt="" /> pisane przez Puppetlabs, testowane na wielu platformach</p>
-          <p class="fragment"><img  style="float: right" src="img/approved-tag-upper-right.png" alt="" /> pisane przez innych autorów, zaakceptowane przez Puppetlabs jako jedne z najlepszych spełniających wymagania</p>
-          <p class="fragment">Ilość ściągnięć, historia, kto developuje, zależności, instalacja pakietów systemu, wartości na sztywno</p>
-        </section>
+                <section>
+                    <h2>Jakie moduły wybierać?</h2>
+                    <p class="fragment"><img style="float: right" src="img/supported-tag-upper-right.png" alt="" /> pisane przez Puppetlabs, testowane na wielu platformach</p>
+                    <p class="fragment"><img style="float: right" src="img/approved-tag-upper-right.png" alt="" /> pisane przez innych autorów, zaakceptowane przez Puppetlabs jako jedne z najlepszych spełniających wymagania</p>
+                    <p class="fragment">Ilość ściągnięć, historia, kto developuje, zależności, instalacja pakietów systemu, wartości na sztywno</p>
+                </section>
 
-        <section>
-          <h1>librarian-puppet</h1>
-          <ul>
-            <li>Upewnia się, że odpowiednie moduły są zainstalowane</li>
-            <li class="fragment">Obsługuje plik <code>Puppetfile</code> <pre><code class="ruby">forge 'https://forge.puppetlabs.com/'
-
+                <section>
+                    <h1>librarian-puppet</h1>
+                    <ul>
+                        <li>Upewnia się, że odpowiednie moduły są zainstalowane</li>
+                        <li class="fragment">Obsługuje plik <code>Puppetfile</code> <pre><code class="ruby">forge 'https://forge.puppetlabs.com/'
 mod 'puppetlabs/apt'
 mod 'puppetlabs/firewall', '1.8.0'</code></pre></li>
-            <li class="fragment">Instalacja z Rubygems: <code>gem install librarian-puppet</code></li>
-            <li class="fragment">Uruchomienie: <code>librarian-puppet update --verbose</code> w katalogu pliku <code>Puppetfile</code></li>
-          </ul>
+                        <li class="fragment">Instalacja z Rubygems: <code>gem install librarian-puppet</code></li>
+                        <li class="fragment">Uruchomienie: <code>librarian-puppet update --verbose</code> w katalogu pliku <code>Puppetfile</code></li>
+                    </ul>
+                </section>
 
-        </section>
+                <section data-background-color="#A61C00">
+                    <h1>Zadanie 5</h1>
+                    <ul>
+                        <li>Napisz skrypt który:
+                            <ul>
+                                <li>zainstaluje <code>librarian-puppet</code></li>
+                                <li>zaaktualizuje plik w katalogu <code>/etc/puppet/Puppetfile</code></li>
+                                <li>uruchomi polecenia <code>librarian-puppet update --verbose</code></li>
+                            </ul>
+                        </li>
+                        <li>Uruchomić ten skrypt przy pomocy Vagrant</li>
+                    </ul>
+                </section>
+                </section>
 
-        <section data-background-color="#A61C00">
-          <h1>Zadanie 4</h1>
-          <ul>
-            <li>Napisz skrypt który: <ul>
-              <li>zainstaluje <code>librarian-puppet</code></li>
-              <li>zaaktualizuje plik w katalogu <code>/etc/puppet/Puppetfile</code></li>
-              <li>uruchomi polecenia <code>librarian-puppet update --verbose</code></li>
-            </ul></li>
-            <li>Uruchomić ten skrypt przy pomocy Vagrant</li>
-          </ul>
-        </section>
 
+                <section>
+                    <section>
+                        <h1>puppetlabs/nodejs</h1>
+                        <h2>Moduł</h2>
+                    </section>
 
-            <section data-background-color="#A61C00">
-                <h1>Projekt</h1>
-                <ul>
-                    <li>Wykorzystując poznane umiejętności napisz manifesty Puppet instalujące i konfigurujące środowisko JavaScript</li>
-                    <li>Postaraj sie o zapisanie ich w formie modułu, klas i definicji</li>
-                    <li>Instalacja modułu dla npm, instalacja narzędzi Grunt, Karma i Bower. Pamiętaj o kolejności instalacji!</li>
-                    <li>Nie zapomnij o testach dymnych</li>
-                    <li>Postaraj się zachować idempotencję</li>
-                    <li>Uruchom kod i przetestuj</li>
-                </ul>
-            </section>
+                    <section>
+                        <h1 class="blue">JavaScript</h1>
+                        <ul>
+                            <li class="fragment">skryptowy język programowania</li>
+                            <li class="fragment">stworzony przez firmę Netscape</li>
+                            <li class="fragment">dominujacy w przeglądarkach internetowych</li>
+                            <li class="fragment">coraz bardziej popularny w wykorzystaniu serwerowym dzięki nodejs</li>
+                        </ul>
+                    </section>
 
-            <section>
-                <h1 class="blue">Co dalej</h1>
-                <h2>Testy rspec</h2>
-                <h2>Procesory raportów Puppet</h2>
-                <h2>Pełna automatyzacja systemów CI</h2>
-            </section>
+                    <section>
+                        <h1 class="blue">Node.js</h1>
+                        <ul>
+                            <li class="fragment">środowisko programistyczne</li>
+                            <li class="fragment">tworzenie wysoce skalowalnych aplikacji internetowych</li>
+                            <li class="fragment">szczególnie serwery www</li>
+                            <li class="fragment">przystosowane dla JavaScript</li>
+                        </ul>
+                    </section>
 
-            <section>
-                <h1 class="blue">Dziękuje</h1>
-            </section>
-            <!-- SLIDES ENDS HERE -->
+                    <section>
+                        <h1 class="blue">NPM</h1>
+                        <ul>
+                            <li class="fragment">Menadżer pakietów dla JavaScript</li>
+                            <li class="fragment">Największa ilość bibliotek i paczek</li>
+                            <li class="fragment">Łatwość publikacji własnego kodu</li>
+                        </ul>
+                    </section>
 
+                    <section>
+                        <h1 class="blue">Dlaczego puppetlabs/nodejs</h1>
+                        <ul>
+                            <li class="fragment">instalacja nodejs</li>
+                            <li class="fragment">udostępnia provider Puppet npm</li>
+                            <li class="fragment">możliwość instalacji lokalnie jak i globalnie</li>
+                            <li class="fragment">duża ilość instalacji, aktywnie wspierane</li>
+                        </ul>
+
+                        <p>https://forge.puppetlabs.com/puppetlabs/nodejs</p>
+                    </section>
+
+                    <section data-background-color="#A61C00">
+                        <h1>Zadanie 6</h1>
+                        <ul>
+                            <li class="fragment">Instalacja modułu <code>puppetlabs/nodejs</code>(za pomocą librarian-puppet)</li>
+                            <li class="fragment">Napisanie manifestu zawierającego nodejs <code>include nodejs</code></li>
+                            <li class="fragment">Uruchomienie na Vagrant i prztestowanie działania poprzez wpisanie w konsole <code>node</code></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Puppet provider</h1>
+                    </section>
+
+                    <section>
+                        <h2>Provider</h2>
+                        <ul>
+                            <li class="fragment">Implementacja sposobu instalacji zasobu typu <code>package</code></li>
+                            <li class="fragment">Możliwe wskazanie providera którym chce się zainstalować daną rzecz</li>
+                            <li class="fragment">Wiele możliwości: aix, appdmg, windows, apt, rpm, pip3</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Dodatkowe providery</h2>
+                        <ul>
+                            <li>Możliwość dodawania dodatkowych providerów</li>
+                        </ul>
+
+                        <pre><code class="puppet">package { 'express':
+  ensure   => 'present',
+  provider => 'npm',
+}</code></pre>
+                    </section>
+
+                    <section data-background-color="#A61C00">
+                        <h1>Zadanie 7</h1>
+                        <ul>
+                            <li>Instalacja paczki <code>compass</code> z RubyGems przy pomocy package i providera <code>gem</code></li>
+                            <li>Sprawdzenie działania poprzez wpisane <code>compass</code></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Użycie modułu puppetlabs/nodejs</h2>
+
+                        <p>
+                            W sytemie dostępne będzie polecenie node.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Instalacja Node.js</h2>
+                        <pre><code class="puppet">class {'nodejs':}</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Instalacja globalna paczki</h2>
+
+                    <pre><code class="puppet">package { 'express':
+  ensure   => 'present',
+  provider => 'npm',
+}</code></pre>
+
+<p>
+    Instalacja paczki <code>express</code> dla każdego użytkownika w systemie.
+</p>
+                    </section>
+
+                    <section>
+                        <h2>Instalacja paczki lokalnie</h2>
+                        <pre>
+                            <code class="puppet">nodejs::npm { 'express from the npm registry':
+  ensure  => 'present',
+  package => 'express',
+  target  => '/opt/packages',
+}</code></pre>
+<p>
+    Instalacja paczki <code>express</code> do /opt/packages dla aktualnego użytkownika w systemie.
+</p>
+                    </section>
+
+                    <section data-background-color="#A61C00">
+                        <h1>Zadanie 8</h1>
+                        <ul>
+                            <li>Zainstalować globalnie paczkę <code>grunt-cli</code> przy użyciu puppetlabs/nodejs</li>
+                            <li>Zainstalować lokalnie paczkę <code>mongodb</code> przy użyciu puppetlabs/nodejs</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section data-background-color="#A61C00">
+                    <h1>Projekt</h1>
+                    <ul>
+                        <li>Za pomocą git sklonować repozytorium: </li>
+                        <li>Odpalić komende <code>npm install</code></li>
+                        <li>odpalić komende <code>grunt</code></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1 class="blue">Co dalej</h1>
+                    <h2>Testy rspec</h2>
+                    <h2>Procesory raportów Puppet</h2>
+                    <h2>Pełna automatyzacja systemów CI</h2>
+                </section>
+
+                <section>
+                    <h1 class="blue">Dziękuje</h1>
+                </section>
+                <!-- SLIDES ENDS HERE -->
         </div>
     </div>
     <script src="lib/js/head.min.js"></script>
